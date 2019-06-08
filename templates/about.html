@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ block.super }}About{% endblock %}
+
+{% block navbar-left %}
+  {% include "_navbar.html" with active_link="about" %}
+{% endblock %}
+
+<!-- Benefits of the Django application -->
+{% block container %}
+
+<div id="sec1" class="text-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>{% include "_brandname.html" %}</h1>
+        <p class="lead">We strive to find the learner in you</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="sec2" class="text-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Meet The Team</h2>
+        <p class="lead">The Wonderful People Behind EduCast</p>
+      </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="text-center"><img class="img-circle centered" src="http://lorempixel.com/128/128/people/1/" alt="profile pic"></div>
+        <!--<p class="heavy text-center">Kate Lamport</p>-->
+        <h2>Umang Shukla</h2>
+        <p>Software Developer | Passionate Startup Enthusiast | Networked Learner | Runner | Chocolate Lover | Excessive Giggler | Participant Observer</p>
+      </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="text-center"><img class="img-circle centered" src="http://lorempixel.com/128/128/people/9/" alt="profile pic"></div>
+        <!--<p class="heavy text-center">Cassidy Coder</p>-->
+        <h2>Jigisha Aryya</h2>
+        <p>Entrepreneur, Tech Evangelist. </p>
+      </div>
+      <div class="col-lg-4">
+        <div class="text-center"><img class="img-circle centered" src="http://lorempixel.com/128/128/people/2/" alt="profile pic"></div>
+        <!--<p class="heavy text-center">James King</p>-->
+        <h2>Ramesh Kumar</h2>
+        <p>Software Engineer, Competitive Programmer</p>
+      </div>
+
+    </div>
+    </div>
+  </div>
+</div>
+
+<div id="sec3">
+  <div class="container">
+    <div class="row">
+      <div id="map-outer" class="col-md-12">
+        <div id="address" class="col-md-4">
+          <h2>Our Location</h2>
+          <address>
+            <strong>EduCast</strong><br>
+            Sequoia Capital, 6th Floor,<br>
+            East Wing, Block B,<br>
+            Divyasree Technopolis, Off HAL Airport Road,<br>
+            Bengaluru, Karnataka 560037<br>
+            <abbr>P:</abbr> +91 8050248326
+          </address>
+        </div>
+        <div id="map-container" class="col-md-8"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock container %}
+
+{% block scripts %}
+  <script src="https://apis.mapmyindia.com/advancedmaps/v1/o7avedxidf83tkzq33oxp5f2nvjjtazh/map_load?v=01."></script>
+  <script>
+
+   // Enter the latitude and longitude of our office here
+   var map = new MapmyIndia.Map("map-container", {
+      center:[12.948473, 77.690892],
+      zoomControl: true,
+      hybrid:true
+   });
+   L.marker([12.948473, 77.690892]).addTo(map);
+
+  </script>
+{% endblock scripts %}
