@@ -2,8 +2,8 @@ let database = function() {
   const firebase = require('firebase-admin');
   	if(!firebase.apps.length){
 	    firebase.initializeApp({
-	        credential: firebase.credential.cert('./chat-4453f-firebase-adminsdk-l9vhg-551081d47a.json'),
-	        databaseURL: "https://chat-4453f.firebaseio.com"
+	        credential: firebase.credential.cert('./educhat.json'),
+	        databaseURL: "https://educhat-243116.firebaseio.com"
 	    });
 	}else{
 		firebase.app();

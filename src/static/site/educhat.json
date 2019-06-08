@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "educhat-243116",
+  "private_key_id": "bf8801de49ad4ef14e63b7babcaa049a5ef6753f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC9Zid8JXlXCVcM\nuih7J4uBzT/w0EeX8b27TBPCYsK5hsZbopbt2swjtlhBYRRlvnB9h9Y1nVDbT5Pt\n/0mel8blHcGPilEm9FV/KO5fvYVuIpfQ598akvRx5bu72lcNOGcO2UmgHoy+smHP\n6FhSCTCGE5s99RUmDfZvXWTITeFD6Av0o8C4IBvuQ7W+5UEA0WN3SoSOTTavc+fI\nmxuTQm7xE0acC5J0aL0xuLzWcRsBWAwftiMaUfxxE40g3U/0wUOwLu6nERqHpgyA\nWaMeyJlRfktCP+x2JdwxRZ4bqM8ekeLoacy8ydc0xGCIaNcINKQnjGHK8A7VSwOu\nHK5tOJ+vAgMBAAECggEAKkzfcrW35P18CKanFeJeIQ5jQnhyFPhzxJoYK6j9DoyQ\nTrUAen0MbMlz6p4w/QxMeWzWJcFN5r1eL6B9o8MIM/GyYkmlGEsnsS/GFXHxlAh7\n2bd/t6Ksn6eMh0cbfCNluQZEkFNiYdDbUaD14NSWlstYN70+DPK/YF3+fVIPhqex\nb2GJrqWllJK23oN26SKe/jBf4MRB6XMXvs66w2qLp+NRtiu5NQAO9411Cs7N7vxB\nKhboLzL8RhTNQp06oeV83i0etIOiYxFYHFYn/z8mAhkqbT/NqfrCK4djA1YZ+DKu\nYFnrojJ73hXbz9d0ifpEFgjxPSCepaOvQgFR4ZnEKQKBgQDd7bXwlX4K5WSGLZWe\na+rZi721awF8Hzu7oLT7PaFLv285+Dw6mPqk0lde5+IO7NI7nAGeZoKwpTfDbx8R\nCxayvn4f5NTOe6Px4Zc+PvxkX7BBVk1tM83OXbQW0xALBG/WeYJlTVLzKTvUrg5K\nEMzk+OnPDk0LQlgbelV6DI7dAwKBgQDaefXtYA1LFHHrJJ9zoNHCK8i6etScSx3d\nPjmqajWtmgDtiMNNs0k6HhDHyzJj3aLT4k6Ql/r1zBWn8u/gujJPQgEtCSsxkocl\njpOVzdDEaPpmyTDVLGd6Pc9dA+lsmEJKOXwInteyRrlcyvU5kSCqqUYd3jPRJWLc\noR1zC52k5QKBgQDCrc4Wd+0TfdtK4R4I1L41jCIkzPOGgJeTpgxdANlHa20Uuy+K\nb7wfbez68gsZ8KETbWz2GRK4Bpb+N7JW7xVAQ168d64+W7ObcbuM/Q/GtTIWfrB5\nBSKazxQ1mXzPTVsWF41NdCE58Yfsr6sVSduTWM8xtWfcYpyLrirhX7bLJQKBgEJH\nga4z15SRbUXy5FTF0xze/5RjMyD/QN4fxIrIkeRKtkFZnjZyT6LMADc8k9rsIDu7\nii4fjUkIUwGSl+dLVXvqAEVTZMEzPMDOEkP+HnmXh2+rVZ82S2YwXjpPt370ahfu\nfIx48+LnxdA62k5OkuRzWgwxnvKyLt3UGwUN3xNpAoGBAIQfPI+4sekKd6N6VUMm\nfqQQGj6XwQ90D8ApQOhXIjY1rpeyGgHpicbWMjkIcvaZuz4WX0ItmsLKd8tFgt5V\nKi4I/7E5T/cOYQ6Gis+ZVi7ML4mYbt1eH5XIvSJ8zoid9Tq1lLJ3UbD3EDHnkKc6\nfSxbw8NCKrKsgtTPdQAEjE+5\n-----END PRIVATE KEY-----\n",
+  "client_email": "educhat@educhat-243116.iam.gserviceaccount.com",
+  "client_id": "101251373326798952865",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/educhat%40educhat-243116.iam.gserviceaccount.com"
+}

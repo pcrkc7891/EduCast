@@ -6,17 +6,47 @@ angular
   	name: 'chat',
     url: '/',
     controller: 'chatCtrl',
-    templateUrl: '/assets/views/chat.html'
+    // templateUrl: '/assets/views/chat.html'
+    template:
+    `
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3> Lecture Chat </h3>
+            <div class="chat__messages-panel">
+                <div class="chat__container">
+                    <div class="chat__bubble" ng-repeat="message in groupChat" ng-class="message.sender_id===currentUser.id ? 'chat__bubble--sent': 'chat__bubble--received'">
+                        <div class="chat__bubble__name">
+                        {{message.sender}}</div>
+                        <div class="chat__bubble__message">
+                        {{message.message}}</div>
+                    </div>
+                </div>
+                <form class="chat__message__container" autocomplete="off" ng-submit="send(sendThisMessage)" ng-if="selectedChat">
+                    <input type="text" name="message" class="chat__message" placeholder="Type a message" autocomplete="off" ng-model="sendThisMessage">
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+        <h3> Lecture Video </h3>
+        <div>
+
+        </div>
+        </div>
+    </div>
+    </div>
+    `
   });
 })
 .run(function(){
 	const config = {
-	    apiKey: "AIzaSyBWSPc_qZEH6wNd6I1dv8dm5ErkqodnqI8",
-	    authDomain: "chat-4453f.firebaseapp.com",
-	    databaseURL: "https://chat-4453f.firebaseio.com",
-	    projectId: "chat-4453f",
-	    storageBucket: "chat-4453f.appspot.com",
-	    messagingSenderId: "266885685983"
+        apiKey: "AIzaSyA5R-KdRQJC5uPWS8hp5ZNajPnVW7uJue8",
+        authDomain: "educhat-243116.firebaseapp.com",
+        databaseURL: "https://educhat-243116.firebaseio.com",
+        projectId: "educhat-243116",
+        storageBucket: "educhat-243116.appspot.com",
+        messagingSenderId: "265199379822",
+        appId: "1:265199379822:web:10198cc9e632d0b0"
 	};
 	firebase.initializeApp(config);
 
