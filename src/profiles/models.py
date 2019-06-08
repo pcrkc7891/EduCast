@@ -5,6 +5,7 @@ from django.db import models
 from django.conf import settings
 import datetime
 
+
 class BaseProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL,
                                 primary_key=True)
@@ -37,8 +38,6 @@ class BaseLecture(models.Model):
     start = models.DateTimeField(default=datetime.datetime.now())
     end = models.DateTimeField(default=datetime.datetime.now()+datetime.timedelta(hours=2))
 
-    class Meta:
-        abstract = True
 
 @python_2_unicode_compatible
 class Lecture(BaseLecture):
@@ -46,13 +45,10 @@ class Lecture(BaseLecture):
         return "{}'s Lecture". format(self.user)
 
 
-
 class BaseLectureAttendee(models.Model):
     student = models.ForeignKey(settings.AUTH_USER_MODEL)
     lecture = models.ForeignKey(Lecture)
 
-    class Meta:
-        abstract = True
 
 @python_2_unicode_compatible
 class LectureAttendee(BaseLectureAttendee):
