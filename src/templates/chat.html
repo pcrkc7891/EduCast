@@ -24,5 +24,11 @@
   <script src="{% static 'site/js/controllers/appCtrl.js' %}"></script>
   <script src="{% static 'site/js/controllers/chatCtrl.js' %}"></script>
   <script src="{% static 'site/js/services/dataService.js' %}"></script>
+  <script src="https://cdn.agora.io/sdk/web/AgoraRTCSDK-2.6.1.js"></script>
+  {% if show_user.get_full_name == "lecturer2" %}
+    <script src="{% static 'site/js/agora-broadcast-lecturer.js' %}"></script>
+  {% else %}
+    <script src="{% static 'site/js/agora-broadcast-audience.js' %}"></script>
+  {% endif %}
 </body>
 </html>

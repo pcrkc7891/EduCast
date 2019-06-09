@@ -11,7 +11,7 @@ angular
     `
     <div class="container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-5">
             <h3> Lecture Chat </h3>
             <div class="chat__messages-panel">
                 <div class="chat__container">
@@ -27,10 +27,15 @@ angular
                 </form>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-7">
         <h3> Lecture Video </h3>
         <div>
-
+            <div id="video">
+                <div id="agora_local" style="padding-top: 10px;"></div>
+            </div>
+            <div id="video_remote">
+                <div id="agora_remote"></div>
+            </div>
         </div>
         </div>
     </div>

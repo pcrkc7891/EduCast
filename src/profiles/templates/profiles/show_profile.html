@@ -3,6 +3,13 @@
 {% load thumbnail %}
 {% block title %}{{ block.super }}Profile{% endblock %}
 {% block container %}
+<style>
+   #player_1 {
+      position: absolute!important;
+      width: 90%!important;
+      height: 925%!important;
+   }
+</style>
 <div id="user-profile-id" style="display:none">
    {{ show_user.id }}
 </div>
