@@ -14,3 +14,7 @@ class ApplyPage(generic.TemplateView):
 
 class AboutPage(generic.TemplateView):
     template_name = "about.html"
+
+
+class FoodCheckout(generic.TemplateView):
+    template_name = "food_checkout.html"

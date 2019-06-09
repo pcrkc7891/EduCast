@@ -1,8 +1,7 @@
 var client = AgoraRTC.createClient({mode: 'live', codec: "h264"});
 
 
-var localstream;
-var uid = 1;
+//var uid = 1;
 var user_type = 'audience';
 
 client.init('1bad9247d5c44b28b40d2363c7c2ae53', function () {
@@ -19,25 +18,33 @@ client.join(null, 'lecture-2', null, function(uid) {
 });
 
 // Set mode
-client.setClientRole("audience", function() {
-  console.log("setHost to audience success");
-}, function(e) {
-  console.log("setHost failed", e);
-})
+//client.setClientRole("audience", function() {
+//  console.log("setHost to audience success");
+//}, function(e) {
+//  console.log("setHost failed", e);
+//})
 
+//subscribe remote stream
+client.on('stream-added', function (evt) {
+  var stream = evt.stream;
+  console.log("New stream added: " + stream.getId());
+  client.subscribe(stream, function (err) {
+    console.log("Subscribe stream failed", err);
+  });
+});
 
 client.on('stream-subscribed', function (evt) {
   var remoteStream = evt.stream;
   console.log("Subscribe remote stream successfully: " + remoteStream.getId());
-  if ($('div#video_remote #agora_remote'+stream.getId()).length === 0) {
-      $('div#video_remote').append('<div id="agora_remote'+stream.getId()+'" style="float:left; width:810px;height:607px;display:inline-block;"></div>');
+  if ($('div#video_remote #agora_remote'+remoteStream.getId()).length === 0) {
+      $('div#video_remote').append('<div id="agora_remote'+remoteStream.getId()+'" style="float:left; width:810px;height:607px;display:inline-block;"></div>');
    }
   remoteStream.play('agora_remote' + remoteStream.getId());
 })
 
-client.leave(function () {
-  console.log("Leave channel successfully");
-}, function (err) {
-  console.log("Leave channel failed");
-});
+//client.leave(function () {
+//  console.log("Leave channel successfully");
+//}, function (err) {
+//  console.log("Leave channel failed");
+//});
 
