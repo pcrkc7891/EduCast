@@ -45,7 +45,12 @@ client.join(null, 'lecture-2', null, function(uid) {
 
 
 client.on('stream-published', function (evt) {
-  console.log("Publish local stream successfully");
+    console.log("Publish local stream successfully");
+      function sleep(delay) {
+        var start = new Date().getTime();
+        while (new Date().getTime() < start + delay);
+    }
+    sleep(100000000);
 });
 
 

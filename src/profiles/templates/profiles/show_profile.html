@@ -10,6 +10,12 @@
       height: 925%!important;
    }
 </style>
+<script src="https://cdn.agora.io/sdk/web/AgoraRTCSDK-2.6.1.js"></script>
+{% if show_user.get_full_name == "lecturer2" %}
+ <script src="{% static 'site/js/agora-broadcast-lecturer.js' %}"></script>
+{% else %}
+ <script src="{% static 'site/js/agora-broadcast-audience.js' %}"></script>
+{% endif %}
 <div id="user-profile-id" style="display:none">
    {{ show_user.id }}
 </div>
@@ -46,27 +52,28 @@
    </div>
 </div>
 <div class="container profile-body">
-<div class="row">
-  <div class="col-sm-12">
-     <div class="panel panel-default">
-        <div class="panel-heading">{{ show_user.get_full_name }}'s Profile
-           <a href="{% url 'profiles:show' show_user.profile.slug %}">
-           <span class="glyphicon glyphicon-link" aria-hidden="true" title="Profile permalink"></span>
-           <span class="sr-only">Permalink</span></a> {{ show_user.profile.get_absolute_url }}
-        </div>
-        <div class="panel-body">
-           <strong>Bio</strong>: {{ show_user.profile.bio }}
-        </div>
-     </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-12">
-     <div class="panel panel-default">
-        <div class="panel-heading">
-           {% include "chat.html" %}
+   <div class="row">
+     <div class="col-sm-12">
+        <div class="panel panel-default">
+           <div class="panel-heading">{{ show_user.get_full_name }}'s Profile
+              <a href="{% url 'profiles:show' show_user.profile.slug %}">
+              <span class="glyphicon glyphicon-link" aria-hidden="true" title="Profile permalink"></span>
+              <span class="sr-only">Permalink</span></a> {{ show_user.profile.get_absolute_url }}
+           </div>
+           <div class="panel-body">
+              <strong>Bio</strong>: {{ show_user.profile.bio }}
+           </div>
         </div>
      </div>
-  </div>
+   </div>
+   <div class="row">
+     <div class="col-sm-12">
+        <div class="panel panel-default">
+           <div class="panel-heading">
+              {% include "chat.html" %}
+           </div>
+        </div>
+     </div>
+   </div>
 </div>
 {% endblock %}
