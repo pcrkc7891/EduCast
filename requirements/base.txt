@@ -1,4 +1,4 @@
-Django==1.9
+Django==2.2.24
 django-environ>=0.3.0
 django-braces>=1.8.0
 django-crispy-forms>=1.4.0
