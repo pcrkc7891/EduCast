@@ -1,4 +1,4 @@
-Django==1.9
+Django==2.2.24
 Markdown==2.6.5
 # Pillow==3.0.0
 PyDictionary==1.5.2
